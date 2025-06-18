@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите имя: ");
+        String name = scanner.nextLine();
+        
+        String formattedName = capitalizeFirstLetter(name);
+        
+        System.out.println("Привет, " + formattedName + "!");
+        
+        scanner.close();
+    }
+    
+    private static String capitalizeFirstLetter(String name) {
+        if (name == null || name.isEmpty()) {
+            return "";
+        }
+        return name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
+    }
+}
