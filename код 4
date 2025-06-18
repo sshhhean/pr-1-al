@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите первое число: ");
+        int num1 = scanner.nextInt();
+        
+        System.out.print("Введите второе число: ");
+        int num2 = scanner.nextInt();
+
+        int start = Math.min(num1, num2);
+        
+        for (int i = 0; i < start; i++) {
+            int current = i + 1;
+            int square = current * current;
+            System.out.print(square + " ");
+        }
+        
+        scanner.close();
+    }
+}
