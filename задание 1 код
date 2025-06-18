@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите первую строку: ");
+        String firstString = scanner.nextLine();
+        
+        System.out.print("Введите вторую строку: ");
+        String secondString = scanner.nextLine();
+        
+        boolean result = isSuffix(firstString, secondString);
+        
+        System.out.println(result);
+        
+        scanner.close();
+    }
+    
+    private static boolean isSuffix(String first, String second) {
+        return first.endsWith(second);
+    }
+}
