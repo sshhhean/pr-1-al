@@ -1,0 +1,32 @@
+import java.util.HashSet;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Введите строку: ");
+        String input = scanner.nextLine();
+        
+        String[] words = input.split("\\s+");
+        
+        HashSet<String> uniqueWords = new HashSet<>();
+        
+        for (String word : words) {
+            uniqueWords.add(word);
+        }
+        
+        StringBuilder result = new StringBuilder();
+        for (String word : uniqueWords) {
+            result.append(word).append(" ");
+        }
+        
+        if (result.length() > 0) {
+            result.setLength(result.length() - 1);
+        }
+        
+        System.out.println("Результат: " + result.toString());
+        
+        scanner.close();
+    }
+}
